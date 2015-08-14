@@ -331,7 +331,8 @@ var __meta__ = {
             openOnClick: false,
             closeOnClick: true,
             hoverDelay: 100,
-            popupCollision: undefined
+            popupCollision: undefined,
+            appendTo: undefined
         },
 
         _initData: function(options) {
@@ -598,7 +599,7 @@ var __meta__ = {
                                 position: directions.position,
                                 collision: options.popupCollision !== undefined ? options.popupCollision : (parentHorizontal ? "fit" : "fit flip"),
                                 anchor: li,
-                                appendTo: li,
+                                appendTo: options.appendTo ? $(options.appendTo) : li,
                                 animation: {
                                     open: extend(true, { effects: openEffects }, options.animation.open),
                                     close: options.animation.close
