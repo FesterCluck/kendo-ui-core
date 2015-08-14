@@ -759,7 +759,7 @@ var __meta__ = {
 
             if ((!that.options.openOnClick || that.clicked) && !touch && !((pointers || msPointers) &&
                 e.originalEvent.pointerType in touchPointerTypes && that._isRootItem(element.closest(allItemsSelector)))) {
-                if (!contains(e.currentTarget, e.relatedTarget) && hasChildren) {
+                if (!contains(e.currentTarget, e.relatedTarget)) {
                     that.open(element);
                 }
             }
